@@ -63,6 +63,8 @@ const mobileMenuOpen = ref(false)
 
 const status = ref('');
 
-//copyUrlToClipboard
-
+function copyUrlToClipboard(){
+console.log('location href', window.location.href);
+  navigator.clipboard.writeText(window.location.href);
+}
 </script>
