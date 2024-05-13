@@ -3,20 +3,7 @@ import './style.css'
 import PrimeVue from 'primevue/config';
 import App from './App.vue'
 import Lara from './assets/presets/aura';
-import { createMemoryHistory, createRouter } from 'vue-router'
-import Home from "./views/Home.vue";
-import TaskDetails from './views/TaskDetails.vue';
-
-const routes = [
-  { path: '/', component: Home },
-  { path: '/task', component: TaskDetails },
-]
-
-const router = createRouter({
-  history: createMemoryHistory(),
-  routes,
-})
-
+import router from './router/index';
 const app = createApp(App);
 app.use(router)
 
