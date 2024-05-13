@@ -9,13 +9,14 @@ import Simple_no_labels from "./application-ui/forms/sign-in-forms/simple_no_lab
 import Simple_on_dark from "./marketing/sections/stats-sections/simple_on_dark.vue";
 import Simple_on_dark_sign from "./application-ui/forms/sign-in-forms/simple_on_dark_sign.vue";
 import SimpleSignUp from "./application-ui/forms/sign-in-forms/simple-sign-up.vue";
+import StackedSettings from "./application-ui/page-examples/settings-screens/stacked-settings.vue";
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 </script>
 
 <template>
-  <simple-sign-up></simple-sign-up>
+  <stacked-settings></stacked-settings>
 </template>
 
 <style scoped>
