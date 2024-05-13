@@ -17,7 +17,7 @@
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <div class="flex flex-1 items-center gap-x-6">
         <button type="button" class="-m-3 p-3 md:hidden" @click="mobileMenuOpen = true">
-          <span class="sr-only">Open main menu</span>
+          <span class="sr-only">Ouvrir menu principal</span>
           <Bars3Icon class="h-5 w-5 text-gray-900" aria-hidden="true" />
         </button>
         <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
@@ -27,11 +27,11 @@
       </nav>
       <div class="flex flex-1 items-center justify-end gap-x-8">
         <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
-          <span class="sr-only">View notifications</span>
+          <span class="sr-only">Voir notifications</span>
           <BellIcon class="h-6 w-6" aria-hidden="true" />
         </button>
         <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your profile</span>
+          <span class="sr-only">Votre profil</span>
           <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
         </a>
       </div>
@@ -41,12 +41,12 @@
       <DialogPanel class="fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6 sm:max-w-sm sm:px-6 sm:ring-1 sm:ring-gray-900/10">
         <div class="-ml-0.5 flex h-16 items-center gap-x-6">
           <button type="button" class="-m-2.5 p-2.5 text-gray-700" @click="mobileMenuOpen = false">
-            <span class="sr-only">Close menu</span>
+            <span class="sr-only">Fermer menu</span>
             <XMarkIconOutline class="h-6 w-6" aria-hidden="true" />
           </button>
           <div class="-ml-0.5">
             <a href="#" class="-m-1.5 block p-1.5">
-              <span class="sr-only">Your Company</span>
+              <span class="sr-only">Votre équipe</span>
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
             </a>
           </div>
@@ -72,28 +72,28 @@
           <div class="flex items-center gap-x-6">
             <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="" class="h-16 w-16 flex-none rounded-full ring-1 ring-gray-900/10" />
             <h1>
-              <div class="text-sm leading-6 text-gray-500">Invoice <span class="text-gray-700">#00011</span></div>
-              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Tuple, Inc</div>
+              <div class="text-sm leading-6 text-gray-500">Tâche <span class="text-gray-700">#00011</span></div>
+              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Corriger faute d'orthographe dans section "Nos projets"</div>
             </h1>
           </div>
           <div class="flex items-center gap-x-4 sm:gap-x-6">
-            <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Copy URL</button>
-            <a href="#" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Edit</a>
-            <a href="#" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send</a>
+            <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Copier l'URL</button>
+            <a href="#" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Modifier</a>
+            <a href="#" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Changer Status</a>
 
             <Menu as="div" class="relative sm:hidden">
               <MenuButton class="-m-3 block p-3">
-                <span class="sr-only">More</span>
+                <span class="sr-only">Plus</span>
                 <EllipsisVerticalIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
               </MenuButton>
 
               <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
                 <MenuItems class="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
                   <MenuItem v-slot="{ active }">
-                    <button type="button" :class="[active ? 'bg-gray-50' : '', 'block w-full px-3 py-1 text-left text-sm leading-6 text-gray-900']">Copy URL</button>
+                    <button type="button" :class="[active ? 'bg-gray-50' : '', 'block w-full px-3 py-1 text-left text-sm leading-6 text-gray-900']">Copier l'URL</button>
                   </MenuItem>
                   <MenuItem v-slot="{ active }">
-                    <a href="#" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6 text-gray-900']">Edit</a>
+                    <a href="#" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6 text-gray-900']">Modifier</a>
                   </MenuItem>
                 </MenuItems>
               </transition>
@@ -107,27 +107,35 @@
       <div class="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
         <!-- Invoice summary -->
         <div class="lg:col-start-3 lg:row-end-1">
-          <h2 class="sr-only">Summary</h2>
+          <h2 class="sr-only">Résumé</h2>
           <div class="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">
             <dl class="flex flex-wrap">
               <div class="flex-auto pl-6 pt-6">
-                <dt class="text-sm font-semibold leading-6 text-gray-900">Amount</dt>
-                <dd class="mt-1 text-base font-semibold leading-6 text-gray-900">$10,560.00</dd>
+                <dt class="text-sm font-semibold leading-6 text-gray-900">Temps consigné</dt>
+                <dd class="mt-1 text-base font-semibold leading-6 text-gray-900"><input type="string" name="" id="" value="30m"></dd>
               </div>
-              <div class="flex-none self-end px-6 pt-4">
+               <div class="flex-none self-end px-6 pt-4">
                 <dt class="sr-only">Status</dt>
-                <dd class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">Paid</dd>
+                <dd class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">A faire</dd>
               </div>
               <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
                 <dt class="flex-none">
-                  <span class="sr-only">Client</span>
+                  <span class="sr-only">Rapporteur</span>
                   <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd class="text-sm font-medium leading-6 text-gray-900">Alex Curren</dd>
+                
+                <dd class="text-sm font-medium leading-6 text-gray-900">
+                  <select name="cars" id="cars">
+                    <option value="alexcurren">Alex Curren</option>
+                    <option value="jeremydefuentes">Jeremy De Fuentes</option>
+                    <option value="sachablanco">Sacha Blanco</option>
+                  </select>
+                </dd>
+                
               </div>
               <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
                 <dt class="flex-none">
-                  <span class="sr-only">Due date</span>
+                  <span class="sr-only">Date de création</span>
                   <CalendarDaysIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 </dt>
                 <dd class="text-sm leading-6 text-gray-500">
@@ -139,82 +147,53 @@
                   <span class="sr-only">Status</span>
                   <CreditCardIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd class="text-sm leading-6 text-gray-500">Paid with MasterCard</dd>
+                <dd class="text-sm leading-6 text-gray-500">A faire</dd>
               </div>
             </dl>
             <div class="mt-6 border-t border-gray-900/5 px-6 py-6">
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Download receipt <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Voir le tableau de bord <span aria-hidden="true">&rarr;</span></a>
             </div>
           </div>
         </div>
 
         <!-- Invoice -->
         <div class="-mx-4 px-4 py-8 shadow-sm ring-1 ring-gray-900/5 sm:mx-0 sm:rounded-lg sm:px-8 sm:pb-14 lg:col-span-2 lg:row-span-2 lg:row-end-2 xl:px-16 xl:pb-20 xl:pt-16">
-          <h2 class="text-base font-semibold leading-6 text-gray-900">Invoice</h2>
-          <dl class="mt-6 grid grid-cols-1 text-sm leading-6 sm:grid-cols-2">
+          <h2 class="text-base font-semibold leading-6 text-gray-900">Tâche</h2>
+          <dl class="mt-3 grid grid-cols-1 text-sm leading-6 sm:grid-cols-2">
             <div class="sm:pr-4">
-              <dt class="inline text-gray-500">Issued on</dt>
+              <dt class="inline text-gray-500">créée le</dt>
               {{ ' ' }}
               <dd class="inline text-gray-700"><time datetime="2023-23-01">January 23, 2023</time></dd>
             </div>
             <div class="mt-2 sm:mt-0 sm:pl-4">
-              <dt class="inline text-gray-500">Due on</dt>
+              <dt class="inline text-gray-500">date de fin estimée</dt>
               {{ ' ' }}
               <dd class="inline text-gray-700"><time datetime="2023-31-01">January 31, 2023</time></dd>
             </div>
-            <div class="mt-6 border-t border-gray-900/5 pt-6 sm:pr-4">
-              <dt class="font-semibold text-gray-900">From</dt>
-              <dd class="mt-2 text-gray-500"><span class="font-medium text-gray-900">Acme, Inc.</span><br />7363 Cynthia Pass<br />Toronto, ON N3Y 4H8</dd>
+          </dl>
+          <dl class="mt-4 grid grid-cols-1 text-sm leading-6 sm:grid-cols-2">
+            <div class="mt-2 border-t border-gray-900/5 pt-6 sm:pr-4">
+              <dt class="font-semibold text-gray-900">Rapporteur</dt>
+              <div class="mt-6 flex w-full flex-none gap-x-4 border-gray-900/5">
+                  <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
+                <dd class="text-sm font-medium leading-6 text-gray-900">Sacha Blanco</dd>
+              </div>
             </div>
-            <div class="mt-8 sm:mt-6 sm:border-t sm:border-gray-900/5 sm:pl-4 sm:pt-6">
-              <dt class="font-semibold text-gray-900">To</dt>
-              <dd class="mt-2 text-gray-500"><span class="font-medium text-gray-900">Tuple, Inc</span><br />886 Walter Street<br />New York, NY 12345</dd>
+          
+            <div class="mt-2 border-t border-gray-900/5 pt-6 sm:pr-4">
+              <dt class="font-semibold text-gray-900">Assigné à</dt>
+              <div class="mt-6 flex w-full flex-none gap-x-4 border-gray-900/5">
+                  <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
+                <dd class="text-sm font-medium leading-6 text-gray-900">Alex Curren</dd>
+              </div>
             </div>
           </dl>
-          <table class="mt-16 w-full whitespace-nowrap text-left text-sm leading-6">
-            <colgroup>
-              <col class="w-full" />
-              <col />
-              <col />
-              <col />
-            </colgroup>
-            <thead class="border-b border-gray-200 text-gray-900">
-              <tr>
-                <th scope="col" class="px-0 py-3 font-semibold">Projects</th>
-                <th scope="col" class="hidden py-3 pl-8 pr-0 text-right font-semibold sm:table-cell">Hours</th>
-                <th scope="col" class="hidden py-3 pl-8 pr-0 text-right font-semibold sm:table-cell">Rate</th>
-                <th scope="col" class="py-3 pl-8 pr-0 text-right font-semibold">Price</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="item in invoice.items" :key="item.id" class="border-b border-gray-100">
-                <td class="max-w-0 px-0 py-5 align-top">
-                  <div class="truncate font-medium text-gray-900">{{ item.title }}</div>
-                  <div class="truncate text-gray-500">{{ item.description }}</div>
-                </td>
-                <td class="hidden py-5 pl-8 pr-0 text-right align-top tabular-nums text-gray-700 sm:table-cell">{{ item.hours }}</td>
-                <td class="hidden py-5 pl-8 pr-0 text-right align-top tabular-nums text-gray-700 sm:table-cell">{{ item.rate }}</td>
-                <td class="py-5 pl-8 pr-0 text-right align-top tabular-nums text-gray-700">{{ item.price }}</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <th scope="row" class="px-0 pb-0 pt-6 font-normal text-gray-700 sm:hidden">Subtotal</th>
-                <th scope="row" colspan="3" class="hidden px-0 pb-0 pt-6 text-right font-normal text-gray-700 sm:table-cell">Subtotal</th>
-                <td class="pb-0 pl-8 pr-0 pt-6 text-right tabular-nums text-gray-900">{{ invoice.subTotal }}</td>
-              </tr>
-              <tr>
-                <th scope="row" class="pt-4 font-normal text-gray-700 sm:hidden">Tax</th>
-                <th scope="row" colspan="3" class="hidden pt-4 text-right font-normal text-gray-700 sm:table-cell">Tax</th>
-                <td class="pb-0 pl-8 pr-0 pt-4 text-right tabular-nums text-gray-900">{{ invoice.tax }}</td>
-              </tr>
-              <tr>
-                <th scope="row" class="pt-4 font-semibold text-gray-900 sm:hidden">Total</th>
-                <th scope="row" colspan="3" class="hidden pt-4 text-right font-semibold text-gray-900 sm:table-cell">Total</th>
-                <td class="pb-0 pl-8 pr-0 pt-4 text-right font-semibold tabular-nums text-gray-900">{{ invoice.total }}</td>
-              </tr>
-            </tfoot>
-          </table>
+          <dl class="mt-2 grid grid-cols-1 text-sm leading-6">
+            <div class="mt-6 border-t border-gray-900/5 pt-6">
+              <dt class="font-semibold text-gray-900">Description</dt>
+              <p>Merci de corriger la faute d'orthographe dans le paragraphe "Nos projets". <br>Il n'y a pas de "e" à "contrôle continu".</p>
+            </div>
+          </dl>
         </div>
 
         <div class="lg:col-start-3">
