@@ -6,7 +6,7 @@
           <span class="sr-only">Open main menu</span>
           <Bars3Icon class="h-5 w-5 text-gray-900" aria-hidden="true"/>
         </button>
-        <img class="h-8 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Your Company" />
+        <img class="h-8 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Time's Up" />
          <h1 class="text-2xl">Time's Up</h1>
       </div>
       <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
