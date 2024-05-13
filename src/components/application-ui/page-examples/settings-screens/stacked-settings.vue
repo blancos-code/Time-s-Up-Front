@@ -77,7 +77,8 @@
                 <div class="text-gray-900">
                   Gros bangala project
                 </div>
-                <button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500">Update</button>
+                <button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500">Editer
+                </button>
               </dd>
             </div>
             <div class="pt-6 sm:flex">
@@ -88,7 +89,7 @@
                 <div class="text-gray-900">
                   10/10/2020
                 </div>
-                <button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500">Update</button>
+                <button type="button" class="font-semibold text-indigo-600 hover:text-indigo-500">Editer</button>
               </dd>
             </div>
           </dl>
