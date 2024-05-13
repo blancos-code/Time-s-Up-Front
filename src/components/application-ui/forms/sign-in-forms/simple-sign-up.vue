@@ -50,8 +50,11 @@
       </p>
     </div>
   </div>
+  <Timeline :value="events">
+    <template #content="slotProps">
+      {{ slotProps.item.status }}
+    </template>
+  </Timeline>
 </template>
 <script setup lang="ts">
-import Calendar from 'primevue/calendar';
-
 </script>
