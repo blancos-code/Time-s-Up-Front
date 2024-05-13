@@ -223,10 +223,8 @@ const teamMembers = ref([
 ]);
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Invoices', href: '#' },
-  { name: 'Clients', href: '#' },
-  { name: 'Expenses', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Tâches', href: '/tasks' }
 ]
 const invoice = {
   subTotal: '$8,800.00',
