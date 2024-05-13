@@ -35,7 +35,7 @@
             <XMarkIcon class="h-6 w-6" aria-hidden="true"/>
           </button>
           <div class="-ml-0.5">
-            <a href="#" class="-m-1.5 block p-1.5">
+            <a href="/" class="-m-1.5 block p-1.5">
               <span class="sr-only">Time's Up</span>
               <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
             </a>
@@ -91,9 +91,9 @@
               <table class="w-full text-left">
                 <thead class="sr-only">
                 <tr>
-                  <th>Amount</th>
+                  <th>Montant</th>
                   <th class="hidden sm:table-cell">Client</th>
-                  <th>More details</th>
+                  <th>Plus de détails</th>
                 </tr>
                 </thead>
                 <tbody>

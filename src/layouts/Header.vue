@@ -6,12 +6,12 @@
           <span class="sr-only">Open main menu</span>
           <Bars3Icon class="h-5 w-5 text-gray-900" aria-hidden="true"/>
         </button>
-        <img class="h-8 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Time's Up"/>
+        <a href="/" class="flex gap-x-6">
+          <img class="h-8 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Time's Up"/>
         <h1 class="text-2xl">Time's Up</h1>
+        </a>
+        
       </div>
-      <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
-        <a v-for="(item, itemIdx) in navigation" :key="itemIdx" :href="item.href">{{ item.name }}</a>
-      </nav>
       <div class="flex flex-1 items-center justify-end gap-x-8">
         <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
           <span class="sr-only">View notifications</span>
@@ -35,18 +35,11 @@
             <XMarkIcon class="h-6 w-6" aria-hidden="true"/>
           </button>
           <div class="-ml-0.5">
-            <a href="#" class="-m-1.5 block p-1.5">
+            <a href="/" class="-m-1.5 block p-1.5">
               <span class="sr-only">Time's Up</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="times up"/>
             </a>
           </div>
-        </div>
-        <div class="mt-2 space-y-2">
-          <a v-for="item in navigation" :key="item.name" :href="item.href"
-             class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{
-              item.name
-            }}
-          </a>
         </div>
       </DialogPanel>
     </Dialog>
@@ -56,9 +49,4 @@
 
 <script setup lang="ts">
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
-
-const navigation = [
-  {name: 'Equipes', href: '/team'},
-  {name: 'Administration', href: '/'},
-]
 </script>
