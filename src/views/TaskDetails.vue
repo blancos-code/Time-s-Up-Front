@@ -1,93 +1,6 @@
 <template>
-  <header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
-    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-1 items-center gap-x-6">
-        <button type="button" class="-m-3 p-3 md:hidden" @click="mobileMenuOpen = true">
-          <span class="sr-only">Ouvrir menu principal</span>
-          <Bars3Icon class="h-5 w-5 text-gray-900" aria-hidden="true" />
-        </button>
-        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company" />
-      </div>
-      <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
-        <a v-for="(item, itemIdx) in navigation" :key="itemIdx" :href="item.href">{{ item.name }}</a>
-      </nav>
-      <div class="flex flex-1 items-center justify-end gap-x-8">
-        <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
-          <span class="sr-only">Voir notifications</span>
-          <BellIcon class="h-6 w-6" aria-hidden="true" />
-        </button>
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Votre profil</span>
-          <img class="h-8 w-8 rounded-full bg-gray-800" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" />
-        </a>
-      </div>
-    </div>
-    <Dialog as="div" class="lg:hidden" @close="mobileMenuOpen = false" :open="mobileMenuOpen">
-      <div class="fixed inset-0 z-50" />
-      <DialogPanel class="fixed inset-y-0 left-0 z-50 w-full overflow-y-auto bg-white px-4 pb-6 sm:max-w-sm sm:px-6 sm:ring-1 sm:ring-gray-900/10">
-        <div class="-ml-0.5 flex h-16 items-center gap-x-6">
-          <button type="button" class="-m-2.5 p-2.5 text-gray-700" @click="mobileMenuOpen = false">
-            <span class="sr-only">Fermer menu</span>
-            <XMarkIconOutline class="h-6 w-6" aria-hidden="true" />
-          </button>
-          <div class="-ml-0.5">
-            <a href="#" class="-m-1.5 block p-1.5">
-              <span class="sr-only">Votre équipe</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
-            </a>
-          </div>
-        </div>
-        <div class="mt-2 space-y-2">
-          <a v-for="item in navigation" :key="item.name" :href="item.href" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">{{ item.name }}</a>
-        </div>
-      </DialogPanel>
-    </Dialog>
-  </header>
-
   <main>
-    <header class="relative isolate pt-16">
-      <div class="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
-        <div class="absolute left-16 top-full -mt-16 transform-gpu opacity-50 blur-3xl xl:left-1/2 xl:-ml-80">
-          <div class="aspect-[1154/678] w-[72.125rem] bg-gradient-to-br from-[#FF80B5] to-[#9089FC]" style="clip-path: polygon(100% 38.5%, 82.6% 100%, 60.2% 37.7%, 52.4% 32.1%, 47.5% 41.8%, 45.2% 65.6%, 27.5% 23.4%, 0.1% 35.3%, 17.9% 0%, 27.7% 23.4%, 76.2% 2.5%, 74.2% 56%, 100% 38.5%)" />
-        </div>
-        <div class="absolute inset-x-0 bottom-0 h-px bg-gray-900/5" />
-      </div>
-
-      <div class="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-        <div class="mx-auto flex max-w-2xl items-center justify-between gap-x-8 lg:mx-0 lg:max-w-none">
-          <div class="flex items-center gap-x-6">
-            <img src="https://tailwindui.com/img/logos/48x48/tuple.svg" alt="" class="h-16 w-16 flex-none rounded-full ring-1 ring-gray-900/10" />
-            <h1>
-              <div class="text-sm leading-6 text-gray-500">Tâche <span class="text-gray-700">#00011</span></div>
-              <div class="mt-1 text-base font-semibold leading-6 text-gray-900">Corriger faute d'orthographe dans section "Nos projets"</div>
-            </h1>
-          </div>
-          <div class="flex items-center gap-x-4 sm:gap-x-6">
-            <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Copier l'URL</button>
-            <a href="#" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">Modifier</a>
-            <a href="#" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Changer Status</a>
-
-            <Menu as="div" class="relative sm:hidden">
-              <MenuButton class="-m-3 block p-3">
-                <span class="sr-only">Plus</span>
-                <EllipsisVerticalIcon class="h-5 w-5 text-gray-500" aria-hidden="true" />
-              </MenuButton>
-
-              <transition enter-active-class="transition ease-out duration-100" enter-from-class="transform opacity-0 scale-95" enter-to-class="transform opacity-100 scale-100" leave-active-class="transition ease-in duration-75" leave-from-class="transform opacity-100 scale-100" leave-to-class="transform opacity-0 scale-95">
-                <MenuItems class="absolute right-0 z-10 mt-0.5 w-32 origin-top-right rounded-md bg-white py-2 shadow-lg ring-1 ring-gray-900/5 focus:outline-none">
-                  <MenuItem v-slot="{ active }">
-                    <button type="button" :class="[active ? 'bg-gray-50' : '', 'block w-full px-3 py-1 text-left text-sm leading-6 text-gray-900']">Copier l'URL</button>
-                  </MenuItem>
-                  <MenuItem v-slot="{ active }">
-                    <a href="#" :class="[active ? 'bg-gray-50' : '', 'block px-3 py-1 text-sm leading-6 text-gray-900']">Modifier</a>
-                  </MenuItem>
-                </MenuItems>
-              </transition>
-            </Menu>
-          </div>
-        </div>
-      </div>
-    </header>
+    <TaskHeader/>
 
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
@@ -98,25 +11,15 @@
             <dl class="flex flex-wrap">
               <div class="flex-auto pl-6 pt-6">
                 <dt class="text-sm font-semibold leading-6 text-gray-900">Temps consigné</dt>
-                <dd class="mt-1 text-base font-semibold leading-6 text-gray-900"><input type="string" name="" id="" value="30m"></dd>
-              </div>
-              <div class="flex-none self-end px-6 pt-4">
-                <dt class="sr-only">Status</dt>
-                <dd class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">A faire</dd>
+                <InputText type="number" v-model="status" />
               </div>
               <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
                 <dt class="flex-none">
                   <span class="sr-only">Rapporteur</span>
-                  <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
+                  <UserCircleIcon class="h-6 w-5 text-gray-400 mt-2" aria-hidden="true" />
                 </dt>
 
-                <dd class="text-sm font-medium leading-6 text-gray-900">
-                  <select name="cars" id="cars">
-                    <option value="alexcurren">Alex Curren</option>
-                    <option value="jeremydefuentes">Jeremy De Fuentes</option>
-                    <option value="sachablanco">Sacha Blanco</option>
-                  </select>
-                </dd>
+                <Dropdown v-model="selectedMember" :options="teamMembers" optionLabel="name" placeholder="Assignez la tâche" :highlightOnSelect="false" class="w-full md:w-14rem" />
 
               </div>
               <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
@@ -133,11 +36,10 @@
                   <span class="sr-only">Status</span>
                   <CreditCardIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 </dt>
-                <dd class="text-sm leading-6 text-gray-500">A faire</dd>
-              </div>
+                <dd class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">A faire</dd>              </div>
             </dl>
             <div class="mt-6 border-t border-gray-900/5 px-6 py-6">
-              <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Voir le tableau de bord <span aria-hidden="true">&rarr;</span></a>
+              <a href="#" class="text-sm font-semibold leading-6 text-gray-900"><span aria-hidden="true">←</span> Retour au projet</a>
             </div>
           </div>
         </div>
@@ -280,25 +182,11 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import {ref} from 'vue'
+import {Listbox, ListboxButton, ListboxLabel, ListboxOption, ListboxOptions,} from '@headlessui/vue'
 import {
-  Dialog,
-  DialogPanel,
-  Listbox,
-  ListboxButton,
-  ListboxLabel,
-  ListboxOption,
-  ListboxOptions,
-  Menu,
-  MenuButton,
-  MenuItem,
-  MenuItems,
-} from '@headlessui/vue'
-import {
-  Bars3Icon,
   CalendarDaysIcon,
   CreditCardIcon,
-  EllipsisVerticalIcon,
   FaceFrownIcon,
   FaceSmileIcon,
   FireIcon,
@@ -308,8 +196,31 @@ import {
   UserCircleIcon,
   XMarkIcon as XMarkIconMini,
 } from '@heroicons/vue/20/solid'
-import { BellIcon, XMarkIcon as XMarkIconOutline } from '@heroicons/vue/24/outline'
-import { CheckCircleIcon } from '@heroicons/vue/24/solid'
+import {CheckCircleIcon} from '@heroicons/vue/24/solid'
+
+import Dropdown from 'primevue/dropdown'
+import InputText from 'primevue/inputtext'
+import TaskHeader from "./TaskHeader.vue";
+
+const selectedMember = ref();
+const teamMembers = ref([
+  {
+    name: 'Jérémy',
+    optionValue : 'Jérémy'
+  },
+  {
+    name : 'Estelle',
+    optionValue  : 'Estelle'
+  },
+  {
+    name : 'Sacha',
+    optionValue  : 'Sacha'
+  },
+  {
+    name : 'Valentin',
+    optionValue  : 'Valentin'
+  }
+]);
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -386,4 +297,7 @@ const moods = [
 
 const mobileMenuOpen = ref(false)
 const selected = ref(moods[5])
+
+const status = ref('');
+
 </script>

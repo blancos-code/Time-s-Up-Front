@@ -3,7 +3,7 @@
     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
       <img class="mx-auto h-10 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Time's Up" />
       <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
-        Connexion
+        Inscription
       </h2>
     </div>
 

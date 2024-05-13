@@ -53,22 +53,7 @@
 
   <main>
     <div class="relative isolate overflow-hidden pt-16">
-      <!-- Secondary navigation -->
-      <header class="pb-4 pt-6 sm:pb-6">
-        <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-6 px-4 sm:flex-nowrap sm:px-6 lg:px-8">
-          <h1 class="text-base font-semibold leading-7 text-gray-900">Les zouzous</h1>
-          <div
-              class="order-last flex w-full gap-x-8 text-sm font-semibold leading-6 sm:order-none sm:w-auto sm:border-l sm:border-gray-200 sm:pl-6 sm:leading-7">
-            <a v-for="item in secondaryNavigation" :key="item.name" :href="item.href"
-               :class="item.current ? 'text-indigo-600' : 'text-gray-700'">{{ item.name }}</a>
-          </div>
-          <a href="#"
-             class="ml-auto flex items-center gap-x-1 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-            <PlusSmallIcon class="-ml-1.5 h-5 w-5" aria-hidden="true"/>
-            Nouveau projet
-          </a>
-        </div>
-      </header>
+      <HomeNavigation/>
 
       <!-- Stats -->
       <div class="border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5">
@@ -169,25 +154,12 @@
 
 <script setup>
 import {ref} from 'vue'
-import {Dialog, DialogPanel, Menu, MenuButton, MenuItem, MenuItems} from '@headlessui/vue'
-import {
-  ArrowDownCircleIcon,
-  ArrowPathIcon,
-  ArrowUpCircleIcon,
-  Bars3Icon,
-  EllipsisHorizontalIcon,
-  PlusSmallIcon,
-  ExclamationTriangleIcon, ClockIcon,
-} from '@heroicons/vue/20/solid'
-
-
+import {Dialog, DialogPanel} from '@headlessui/vue'
+import {Bars3Icon, ClockIcon, ExclamationTriangleIcon,} from '@heroicons/vue/20/solid'
 
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
+import HomeNavigation from "./HomeNavigation.vue";
 
-const navigation = [
-  {name: 'Equipes', href: '#'},
-  {name: 'Administration', href: '#'},
-]
 const secondaryNavigation = [
   {name: 'Tableau de bord', href: '#', current: true},
   {name: 'Equipe', href: '#', current: false},
@@ -195,7 +167,7 @@ const secondaryNavigation = [
 const stats = [
   {name: 'Cummul des charges', value: '540H', change: '63%', changeType: 'positive'},
   {name: 'Capacité de charges', value: '700H', change: '', changeType: 'positive'},
-  {name: 'Cummul des surchages', value: '8H', change: '1.39%', changeType: 'negative'},
+  {name: 'Cummul des surchages', value: '8H', change: '', changeType: 'negative'},
   {name: 'Nombre de membres', value: '17', change: '', changeType: 'negative'},
 ]
 const statuses = {
