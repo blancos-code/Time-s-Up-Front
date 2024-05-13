@@ -55,7 +55,6 @@
     <div class="relative isolate overflow-hidden pt-16">
       <HomeNavigation/>
 
-      <!-- Stats -->
       <div class="border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5">
         <dl class="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:px-2 xl:px-0">
           <div v-for="(stat, statIdx) in stats" :key="stat.name"
@@ -98,28 +97,28 @@
                 </tr>
                 </thead>
                 <tbody>
-                <template v-for="day in projets" :key="day.dateTime">
+                <template v-for="project in projets" :key="project.dateTime">
                   <tr class="text-sm leading-6 text-gray-900">
                     <th scope="colgroup" colspan="3" class="relative isolate py-2 font-semibold">
-                      <time :datetime="day.dateTime">{{ day.date }}</time>
+                      <time :datetime="project.dateTime">{{ project.date }}</time>
                       <div class="absolute inset-y-0 right-full -z-10 w-screen border-b border-gray-200 bg-gray-50"/>
                       <div class="absolute inset-y-0 left-0 -z-10 w-screen border-b border-gray-200 bg-gray-50"/>
                     </th>
                   </tr>
-                  <tr v-for="transaction in day.transactions" :key="transaction.id">
+                  <tr v-for="project in project.data" :key="project.id">
                     <td class="relative py-5 pr-6">
                       <div class="flex gap-x-6">
-                        <component :is="transaction.icon" class="hidden h-6 w-5 flex-none text-gray-400 sm:block"
+                        <component :is="project.icon" class="hidden h-6 w-5 flex-none text-gray-400 sm:block"
                                    aria-hidden="true"/>
                         <div class="flex-auto">
                           <div class="flex items-start gap-x-3">
-                            <div class="text-sm font-medium leading-6 text-gray-900">{{ transaction.amount }}</div>
+                            <div class="text-sm font-medium leading-6 text-gray-900">{{ project.amount }}</div>
                             <div
-                                :class="transaction.status ? [statuses[transaction.status], 'rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset'] : ''">
-                              {{ transaction.status }}
+                                :class="project.status ? [statuses[project.status], 'rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset'] : ''">
+                              {{ project.status }}
                             </div>
                           </div>
-                          <div v-if="transaction.tax" class="mt-1 text-xs leading-5 text-gray-500">{{ transaction.tax }}
+                          <div v-if="project.tax" class="mt-1 text-xs leading-5 text-gray-500">{{ project.tax }}
 
                           </div>
                         </div>
@@ -128,15 +127,15 @@
                       <div class="absolute bottom-0 left-0 h-px w-screen bg-gray-100"/>
                     </td>
                     <td class="hidden py-5 pr-6 sm:table-cell">
-                      <div class="text-sm leading-6 text-gray-900">{{ transaction.client }}</div>
-                      <div class="mt-1 text-xs leading-5 text-gray-500">{{ transaction.description }}</div>
+                      <div class="text-sm leading-6 text-gray-900">{{ project.client }}</div>
+                      <div class="mt-1 text-xs leading-5 text-gray-500">{{ project.description }}</div>
                     </td>
                     <td class="py-5 text-right">
                       <div class="flex justify-end">
-                        <a :href="transaction.href"
+                        <a :href="project.href"
                            class="text-sm font-medium leading-6 text-indigo-600 hover:text-indigo-500"
                         >Voir<span class="hidden sm:inline"> le projet</span><span
-                            class="sr-only">, invoice #{{ transaction.invoiceNumber }}, {{ transaction.client }}</span></a
+                            class="sr-only">, invoice #{{ project.invoiceNumber }}, {{ project.client }}</span></a
                         >
                       </div>
                     </td>
@@ -177,7 +176,7 @@ const projets = [
   {
     date: 'Actifs',
     dateTime: '2023-03-22',
-    transactions: [
+    data: [
       {
         id: 1,
         invoiceNumber: '00012',
@@ -214,7 +213,7 @@ const projets = [
   {
     date: 'Terminés',
     dateTime: '2023-03-22',
-    transactions: [
+    data: [
       {
         id: 1,
         invoiceNumber: '00012',
