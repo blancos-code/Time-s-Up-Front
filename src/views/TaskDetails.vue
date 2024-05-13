@@ -1,17 +1,3 @@
-<!--
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/forms'),
-    ],
-  }
-  ```
--->
 <template>
   <header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
     <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
@@ -114,7 +100,7 @@
                 <dt class="text-sm font-semibold leading-6 text-gray-900">Temps consigné</dt>
                 <dd class="mt-1 text-base font-semibold leading-6 text-gray-900"><input type="string" name="" id="" value="30m"></dd>
               </div>
-               <div class="flex-none self-end px-6 pt-4">
+              <div class="flex-none self-end px-6 pt-4">
                 <dt class="sr-only">Status</dt>
                 <dd class="rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-600 ring-1 ring-inset ring-green-600/20">A faire</dd>
               </div>
@@ -123,7 +109,7 @@
                   <span class="sr-only">Rapporteur</span>
                   <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 </dt>
-                
+
                 <dd class="text-sm font-medium leading-6 text-gray-900">
                   <select name="cars" id="cars">
                     <option value="alexcurren">Alex Curren</option>
@@ -131,7 +117,7 @@
                     <option value="sachablanco">Sacha Blanco</option>
                   </select>
                 </dd>
-                
+
               </div>
               <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
                 <dt class="flex-none">
@@ -175,15 +161,15 @@
             <div class="mt-2 border-t border-gray-900/5 pt-6 sm:pr-4">
               <dt class="font-semibold text-gray-900">Rapporteur</dt>
               <div class="mt-6 flex w-full flex-none gap-x-4 border-gray-900/5">
-                  <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
+                <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 <dd class="text-sm font-medium leading-6 text-gray-900">Sacha Blanco</dd>
               </div>
             </div>
-          
+
             <div class="mt-2 border-t border-gray-900/5 pt-6 sm:pr-4">
               <dt class="font-semibold text-gray-900">Assigné à</dt>
               <div class="mt-6 flex w-full flex-none gap-x-4 border-gray-900/5">
-                  <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
+                <UserCircleIcon class="h-6 w-5 text-gray-400" aria-hidden="true" />
                 <dd class="text-sm font-medium leading-6 text-gray-900">Alex Curren</dd>
               </div>
             </div>
@@ -380,7 +366,7 @@ const activity = [
     person: {
       name: 'Chelsea Hagon',
       imageUrl:
-        'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+          'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
     },
     comment: 'Called client, they reassured me the invoice would be paid by the 25th.',
     date: '3d ago',
