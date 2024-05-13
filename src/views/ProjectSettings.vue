@@ -114,14 +114,12 @@ import {
 } from '@heroicons/vue/24/outline'
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Invoices', href: '#' },
-  { name: 'Clients', href: '#' },
-  { name: 'Expenses', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Task', href: '/task' },
 ]
 const secondaryNavigation = [
-  { name: 'Général', href: '#', icon: UserCircleIcon, current: true },
-  { name: 'Equipe', href: '#', icon: UsersIcon, current: false },
+  { name: 'Général', href: '/', icon: UserCircleIcon, current: true },
+  { name: 'Equipe', href: '/team', icon: UsersIcon, current: false },
 ]
 
 const mobileMenuOpen = ref(false)

@@ -58,7 +58,7 @@
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 
 const navigation = [
-  {name: 'Equipes', href: '#'},
-  {name: 'Administration', href: '#'},
+  {name: 'Equipes', href: '/team'},
+  {name: 'Administration', href: '/'},
 ]
 </script>

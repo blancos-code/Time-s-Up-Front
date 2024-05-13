@@ -14,14 +14,14 @@
       </nav>
       <div class="flex flex-1 items-center justify-end gap-x-8">
         <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
-          <span class="sr-only">View notifications</span>
+          <span class="sr-only">Voir notifications</span>
           <BellIcon class="h-6 w-6" aria-hidden="true"/>
         </button>
-        <a href="#" class="-m-1.5 p-1.5">
+        <a href="/account" class="-m-1.5 p-1.5">
           <span class="sr-only">Your profile</span>
           <img class="h-8 w-8 rounded-full bg-gray-800"
                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-               alt=""/>
+               alt="your profile"/>
         </a>
       </div>
     </div>
@@ -160,8 +160,8 @@ import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 import HomeNavigation from "./HomeNavigation.vue";
 
 const secondaryNavigation = [
-  {name: 'Tableau de bord', href: '#', current: true},
-  {name: 'Equipe', href: '#', current: false},
+  {name: 'Tableau de bord', href: '/', current: true},
+  {name: 'Equipe', href: '/team', current: false},
 ]
 const stats = [
   {name: 'Cummul des charges', value: '540H', change: '63%', changeType: 'positive'},
@@ -180,7 +180,7 @@ const projets = [
       {
         id: 1,
         invoiceNumber: '00012',
-        href: '#',
+        href: '/task',
         amount: 'CTF',
         tax: '300H',
         client: 'Capture du drapeau',
@@ -190,7 +190,7 @@ const projets = [
       {
         id: 2,
         invoiceNumber: '00011',
-        href: '#',
+        href: '/task',
         amount: 'Tailwind de ouf',
         tax: '23H',
         client: 'Du front',
@@ -200,7 +200,7 @@ const projets = [
       {
         id: 3,
         invoiceNumber: '00009',
-        href: '#',
+        href: '/task',
         amount: 'The muerte project',
         tax: '3H',
         status: 'Surcharge',
@@ -217,7 +217,7 @@ const projets = [
       {
         id: 1,
         invoiceNumber: '00012',
-        href: '#',
+        href: '/task',
         amount: 'Monchibre Corp.',
         tax: '300H',
         client: 'Une entreprise',
