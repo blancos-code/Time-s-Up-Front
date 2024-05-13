@@ -5,11 +5,10 @@ import App from './App.vue'
 import Lara from './assets/presets/aura';
 import { createMemoryHistory, createRouter } from 'vue-router'
 import Home from "./views/Home.vue";
-import TaskDetails from "./views/TaskDetails.vue";
+import TaskDetails from './views/TaskDetails.vue';
 
 const routes = [
   { path: '/', component: Home },
-  //{path: '/test', component: Test},
   { path: '/task', component: TaskDetails },
 ]
 
