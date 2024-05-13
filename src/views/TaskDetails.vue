@@ -10,8 +10,12 @@
           <div class="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">
             <dl class="flex flex-wrap">
               <div class="flex-auto pl-6 pt-6">
-                <dt class="text-sm font-semibold leading-6 text-gray-900">Temps consigné</dt>
-                <InputText type="number" v-model="status" />
+                <dt class="text-sm font-semibold leading-6 text-gray-900">Temps consigné (h)</dt>
+                <InputText type="number" v-model="status">
+                  <template #append>
+                    <span>h</span>
+                  </template>
+                </InputText>
               </div>
               <div class="mt-6 flex w-full flex-none gap-x-4 border-t border-gray-900/5 px-6 pt-6">
                 <dt class="flex-none">
@@ -20,7 +24,6 @@
                 </dt>
 
                 <Dropdown v-model="selectedMember" :options="teamMembers" optionLabel="name" placeholder="Assignez la tâche" :highlightOnSelect="false" class="w-full md:w-14rem" />
-
               </div>
               <div class="mt-4 flex w-full flex-none gap-x-4 px-6">
                 <dt class="flex-none">
