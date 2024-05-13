@@ -312,10 +312,8 @@ import { BellIcon, XMarkIcon as XMarkIconOutline } from '@heroicons/vue/24/outli
 import { CheckCircleIcon } from '@heroicons/vue/24/solid'
 
 const navigation = [
-  { name: 'Home', href: '#' },
-  { name: 'Invoices', href: '#' },
-  { name: 'Clients', href: '#' },
-  { name: 'Expenses', href: '#' },
+  { name: 'Home', href: '/' },
+  { name: 'Tâches', href: '/tasks' }
 ]
 const invoice = {
   subTotal: '$8,800.00',

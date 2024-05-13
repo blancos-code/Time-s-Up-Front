@@ -185,12 +185,12 @@ import {
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 
 const navigation = [
-  {name: 'Equipes', href: '#'},
+  {name: 'Equipes', href: '/teams'},
   {name: 'Administration', href: '#'},
 ]
 const secondaryNavigation = [
-  {name: 'Tableau de bord', href: '#', current: true},
-  {name: 'Equipe', href: '#', current: false},
+  {name: 'Tableau de bord', href: '/', current: true},
+  {name: 'Equipe', href: '/team', current: false},
 ]
 const stats = [
   {name: 'Cummul des charges', value: '540H', change: '63%', changeType: 'positive'},
