@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex" aria-label="Breadcrumb">
+  <nav class="flex pt-8  mt-16 ml-16 pl-12" aria-label="Breadcrumb">
     <ol role="list" class="flex items-center space-x-4">
       <li>
         <div>
@@ -25,7 +25,7 @@
 import { HomeIcon } from '@heroicons/vue/20/solid'
 
 const pages = [
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Project Nero', href: '#', current: true },
+  { name: 'Nom du projet', href: '/', current: false },
+  { name: 'Tâche #00011', href: '/task', current: true },
 ]
 </script>

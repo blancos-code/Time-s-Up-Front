@@ -21,7 +21,7 @@
           </h1>
         </div>
         <div class="flex items-center gap-x-4 sm:gap-x-6">
-          <button type="button" v-bind:on-click="copyUrlToClipboard()" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">
+          <button type="button" class="hidden text-sm font-semibold leading-6 text-gray-900 sm:block">
             Copier l'URL
           </button>
           <Menu as="div" class="relative sm:hidden">

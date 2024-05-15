@@ -8,9 +8,9 @@
         </button>
         <a href="/" class="flex gap-x-6">
           <img class="h-8 w-auto" src="https://www.svgrepo.com/show/101461/time-management-clock.svg" alt="Time's Up"/>
-        <h1 class="text-2xl">Time's Up</h1>
+          <h1 class="text-2xl">Time's Up</h1>
         </a>
-        
+
       </div>
       <div class="flex flex-1 items-center justify-end gap-x-8">
         <button type="button" class="-m-2.5 p-2.5 text-gray-400 hover:text-gray-500">
@@ -37,7 +37,8 @@
           <div class="-ml-0.5">
             <a href="/" class="-m-1.5 block p-1.5">
               <span class="sr-only">Time's Up</span>
-              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="times up"/>
+              <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                   alt="times up"/>
             </a>
           </div>
         </div>
@@ -45,8 +46,23 @@
     </Dialog>
   </header>
   <router-view></router-view>
+    <AppFooter></AppFooter>
 </template>
 
 <script setup lang="ts">
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
+import AppFooter from "./AppFooter.vue";
+import Simple_with_icons from "../components/templates/application-ui/lists/feeds/simple_with_icons.vue";
+import With_comments from "../components/templates/application-ui/lists/feeds/with_comments.vue";
+import SimpleStack from "../components/templates/application-ui/lists/stacked-lists/simple-stack.vue";
+import SimpleFeature from "../components/templates/marketing/sections/feature-sections/simple-feature.vue";
+import Offset_with_feature_list
+  from "../components/templates/marketing/sections/feature-sections/offset_with_feature_list.vue";
+import With_four_tiers from "../components/templates/marketing/page-examples/pricing-pages/with_four_tiers.vue";
+import Left_aligned from "../components/templates/marketing/elements/banners/left_aligned.vue";
+import Left_alignedList
+  from "../components/templates/application-ui/data-display/description-lists/left_aligned-list.vue";
+import Full_width_bar from "../components/templates/application-ui/navigation/breadcrumbs/full_width_bar.vue";
+import Contained from "../components/templates/application-ui/navigation/breadcrumbs/contained.vue";
+import Simple_with_slashes from "../components/templates/application-ui/navigation/breadcrumbs/simple_with_slashes.vue";
 </script>

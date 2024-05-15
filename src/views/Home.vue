@@ -157,7 +157,7 @@ import {Dialog, DialogPanel} from '@headlessui/vue'
 import {Bars3Icon, ClockIcon, ExclamationTriangleIcon,} from '@heroicons/vue/20/solid'
 
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
-import HomeNavigation from "./HomeNavigation.vue";
+import HomeNavigation from "../components/HomeNavigation.vue";
 
 const secondaryNavigation = [
   {name: 'Tableau de bord', href: '/', current: true},
@@ -180,7 +180,7 @@ const projets = [
       {
         id: 1,
         invoiceNumber: '00012',
-        href: '/task',
+        href: '/project',
         amount: 'CTF',
         tax: '300H',
         client: 'Capture du drapeau',
@@ -190,7 +190,7 @@ const projets = [
       {
         id: 2,
         invoiceNumber: '00011',
-        href: '/task',
+        href: '/project',
         amount: 'Tailwind de ouf',
         tax: '23H',
         client: 'Du front',
@@ -200,7 +200,7 @@ const projets = [
       {
         id: 3,
         invoiceNumber: '00009',
-        href: '/task',
+        href: '/project',
         amount: 'The muerte project',
         tax: '3H',
         status: 'Surcharge',
@@ -217,7 +217,7 @@ const projets = [
       {
         id: 1,
         invoiceNumber: '00012',
-        href: '/task',
+        href: '/project',
         amount: 'Monchibre Corp.',
         tax: '300H',
         client: 'Une entreprise',

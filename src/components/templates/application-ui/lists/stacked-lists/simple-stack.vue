@@ -1,5 +1,5 @@
 <template>
-  <ul role="list" class="divide-y divide-gray-100">
+  <ul role="list" class="divide-y divide-gray-100 mt-16 w-1/2">
     <li v-for="person in people" :key="person.email" class="flex justify-between gap-x-6 py-5">
       <div class="flex gap-x-4">
         <img class="h-12 w-12 flex-none rounded-full bg-gray-50" :src="person.imageUrl" alt="" />
