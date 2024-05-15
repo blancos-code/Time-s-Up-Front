@@ -153,6 +153,7 @@
 import router from "../../router";
 import {ref} from "vue";
 import {login, register} from "../../apiRequests/auth.ts";
+import {displayErrorToast} from "../../toast/toast.ts";
 
 const lastname = ref('')
 const firstname = ref('')
@@ -168,6 +169,7 @@ function tryToRegister() {
         router.push({name: 'home'})
       })
       .catch(error => {
+        displayErrorToast("Erreur lors de l'inscription")
         console.error(error);
       });
 }

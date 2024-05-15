@@ -164,8 +164,7 @@ const secondaryNavigation = [
   {name: 'Equipe', href: '/team', current: false},
 ]
 const stats = [
-  {name: 'Cummul des charges', value: '540H', change: '63%', changeType: 'positive'},
-  {name: 'Capacité de charges', value: '700H', change: '', changeType: 'positive'},
+  {name: 'Cummul des charges', value: '540H', change: '', changeType: 'positive'},
   {name: 'Cummul des surchages', value: '8H', change: '', changeType: 'negative'},
   {name: 'Nombre de membres', value: '17', change: '', changeType: 'negative'},
 ]

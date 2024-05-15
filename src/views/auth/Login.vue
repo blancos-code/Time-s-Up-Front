@@ -13,7 +13,7 @@
 
     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
       <form
-          @submit.prevent="trytoLogin"
+          @submit.prevent="tryToLogin"
           class="space-y-6">
         <div>
           <label
@@ -96,11 +96,12 @@
 import {ref} from "vue";
 import router from "../../router";
 import {login} from "../../apiRequests/auth.ts";
+import {displayErrorToast} from "../../toast/toast.ts";
 
 const email = ref('')
 const password = ref('')
 
-function trytoLogin() {
+function tryToLogin() {
   login(email.value, password.value)
       .then(response => {
 
@@ -109,6 +110,7 @@ function trytoLogin() {
         router.push({name: 'home'})
       })
       .catch(error => {
+        displayErrorToast('Mauvais identifiants')
         console.error(error);
       });
 }
