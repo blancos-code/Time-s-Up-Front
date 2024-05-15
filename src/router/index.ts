@@ -29,21 +29,21 @@ const router = createRouter({
       ]
     },
     {
-      path: '/signin',
-      name: 'signin',
-      component: () => import('../views/auth/SignIn.vue')
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/auth/Login.vue')
     },
     {
-      path: '/signup',
-      name: 'signup',
-      component: () => import('../views/auth/SignUp.vue')
+      path: '/register',
+      name: 'register',
+      component: () => import('../views/auth/Register.vue')
     },
   ]
 })
 
 router.beforeEach((to, from) => {
   if (to.meta.requiresAuth && !AuthGuard.isAuthenticated()) {
-    return { name: 'signin' }
+    return { name: 'login' }
   }
 })
 
