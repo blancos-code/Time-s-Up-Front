@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="mx-auto max-w-7xl">
     <div class="relative isolate overflow-hidden pt-16">
 
       <ProjectDetailsHeader></ProjectDetailsHeader>

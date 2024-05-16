@@ -4,7 +4,7 @@
 
     <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
       <div class="mx-auto grid max-w-2xl grid-cols-1 grid-rows-1 items-start gap-x-8 gap-y-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-        <!-- Invoice summary -->
+        <!-- task summary -->
         <div class="lg:col-start-3 lg:row-end-1">
           <h2 class="sr-only">Résumé</h2>
           <div class="rounded-lg bg-gray-50 shadow-sm ring-1 ring-gray-900/5">
