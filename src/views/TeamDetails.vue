@@ -2,6 +2,7 @@
    <main class="mx-auto max-w-7xl">
     <div class="relative isolate overflow-hidden pt-16">
       <TeamHeader/>
+      <TeamNavigation/>
       <!--<div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
       <div class="flex flex-1 items-center gap-x-6">-->
     </div>
@@ -28,7 +29,7 @@
   import Dropdown from 'primevue/dropdown'
   import InputText from 'primevue/inputtext'
   import TeamHeader from "./TeamHeader.vue";
-  
+  import TeamNavigation from "../components/TeamNavigation.vue";
   const selectedMember = ref();
   const teamMembers = ref([
     {
