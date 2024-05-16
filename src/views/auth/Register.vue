@@ -170,10 +170,10 @@ function tryToRegister() {
   register(lastname.value, firstname.value, email.value, password.value)
       .then((response : any) => {
         const token = response.data.token;
-        const userId = response.data.id;
-        const lastname = response.data.lastname;
-        const firstname = response.data.firstname;
-        const email = response.data.email;
+        const userId = response.data.User.id;
+        const lastname = response.data.User.lastname;
+        const firstname = response.data.User.firstname;
+        const email = response.data.User.email;
 
         localStorage.setItem('accessToken', token);
         localStorage.setItem('userId', userId);
