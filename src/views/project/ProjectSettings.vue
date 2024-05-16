@@ -101,13 +101,10 @@
 
 <script setup>
 import { ref } from 'vue'
-import {Dialog, DialogPanel, Switch, SwitchGroup, SwitchLabel, TabGroup, TabList} from '@headlessui/vue'
+import {Dialog, DialogPanel} from '@headlessui/vue'
 import { Bars3Icon } from '@heroicons/vue/20/solid'
 import {
   BellIcon,
-  CreditCardIcon,
-  CubeIcon,
-  FingerPrintIcon,
   UserCircleIcon,
   UsersIcon,
   XMarkIcon,
@@ -123,5 +120,4 @@ const secondaryNavigation = [
 ]
 
 const mobileMenuOpen = ref(false)
-const automaticTimezoneEnabled = ref(true)
 </script>

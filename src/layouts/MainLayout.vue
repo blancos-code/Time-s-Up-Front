@@ -45,6 +45,7 @@
       </DialogPanel>
     </Dialog>
   </header>
+  <CreateTeamModal/>
   <router-view></router-view>
     <AppFooter></AppFooter>
 </template>
@@ -52,17 +53,5 @@
 <script setup lang="ts">
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 import AppFooter from "./AppFooter.vue";
-import Simple_with_icons from "../components/templates/application-ui/lists/feeds/simple_with_icons.vue";
-import With_comments from "../components/templates/application-ui/lists/feeds/with_comments.vue";
-import SimpleStack from "../components/templates/application-ui/lists/stacked-lists/simple-stack.vue";
-import SimpleFeature from "../components/templates/marketing/sections/feature-sections/simple-feature.vue";
-import Offset_with_feature_list
-  from "../components/templates/marketing/sections/feature-sections/offset_with_feature_list.vue";
-import With_four_tiers from "../components/templates/marketing/page-examples/pricing-pages/with_four_tiers.vue";
-import Left_aligned from "../components/templates/marketing/elements/banners/left_aligned.vue";
-import Left_alignedList
-  from "../components/templates/application-ui/data-display/description-lists/left_aligned-list.vue";
-import Full_width_bar from "../components/templates/application-ui/navigation/breadcrumbs/full_width_bar.vue";
-import Contained from "../components/templates/application-ui/navigation/breadcrumbs/contained.vue";
-import Simple_with_slashes from "../components/templates/application-ui/navigation/breadcrumbs/simple_with_slashes.vue";
+import CreateTeamModal from "../components/modal/CreateTeamModal.vue";
 </script>

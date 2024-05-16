@@ -13,9 +13,9 @@
 <script setup>
 
 
-import ProjectDetailsHeader from "../components/ProjectDetailsHeader.vue";
-import ProjectDetailsNavigation from "../components/ProjectDetailsNavigation.vue";
-import ProjectTaskView from "../components/ProjectTaskView.vue";
+import ProjectDetailsHeader from "../../components/project/ProjectDetailsHeader.vue";
+import ProjectDetailsNavigation from "../../components/project/ProjectDetailsNavigation.vue";
+import ProjectTaskView from "../../components/project/task/ProjectTaskView.vue";
 
 const stats = [
   {name: 'Cummul des charges', value: '10H', change: '47%', changeType: 'positive'},

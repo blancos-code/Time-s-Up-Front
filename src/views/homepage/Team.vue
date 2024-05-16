@@ -20,8 +20,8 @@ import {
   XMarkIcon as XMarkIconMini,
 } from "@heroicons/vue/20/solid";
 
-import NoTeamMessage from "./NoTeamMessage.vue";
-import HomeNavigation from "../components/HomeNavigation.vue";
+import NoTeamMessage from "../../components/NoTeamMessage.vue";
+import HomeNavigation from "../../components/HomeNavigation.vue";
 
 const teams = ref([]);
 const teamMembers = ref([

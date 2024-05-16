@@ -1,7 +1,9 @@
 <template>
   <main>
     <div class="relative isolate overflow-hidden pt-16">
-      <HomeNavigation/>
+      <HomeNavigation
+
+      />
 
       <div
         v-if="hasATeam"
@@ -112,9 +114,9 @@
 import {computed, onMounted, ref} from 'vue'
 import {ClockIcon, ExclamationTriangleIcon,} from '@heroicons/vue/20/solid'
 
-import HomeNavigation from "../components/HomeNavigation.vue";
-import {getUserInfos} from "../apiRequests/user.ts";
-import NoTeamMessage from "./NoTeamMessage.vue";
+import HomeNavigation from "../../components/HomeNavigation.vue";
+import {getUserInfos} from "../../apiRequests/user.ts";
+import NoTeamMessage from "../../components/NoTeamMessage.vue";
 
 const secondaryNavigation = [
   {name: 'Tableau de bord', href: '/', current: true},
