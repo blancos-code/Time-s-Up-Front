@@ -106,10 +106,10 @@ function tryToLogin() {
       .then(response => {
 
         const token = response.data.token;
-        const userId = response.data.id;
-        const lastname = response.data.lastname;
-        const firstname = response.data.firstname;
-        const email = response.data.email;
+        const userId = response.data.filteredUser.id;
+        const lastname = response.data.filteredUser.lastname;
+        const firstname = response.data.filteredUser.firstname;
+        const email = response.data.filteredUser.email;
 
         localStorage.setItem('accessToken', token);
         localStorage.setItem('userId', userId);
