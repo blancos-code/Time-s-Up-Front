@@ -1,24 +1,10 @@
 <template>
   <main class="mx-auto max-w-7xl">
     <div class="relative isolate overflow-hidden pt-16">
-      <TeamNavigation v-if="teams.length !== 0" />
-      <div class="text-center mt-2" v-if="teams.length === 0">
-        <p>Vous n'avez pas encore d'équipe</p>
-        <div class="flex mx-auto items-center max-w-1xl">
-          <a
-            href="/"
-            class="ml-auto flex items-center gap-x-1 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Nouvelle équipe
-          </a>
-          <a
-            href="/"
-            class="ml-auto flex items-center gap-x-1 rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-          >
-            Rejoindre une équipe
-          </a>
-        </div>
-      </div>
+      <HomeNavigation/>
+      <NoTeamMessage
+        v-if="teams.length === 0"
+      />
     </div>
   </main>
 </template>
@@ -26,30 +12,17 @@
 <script setup>
 import { ref } from "vue";
 import {
-  Listbox,
-  ListboxButton,
-  ListboxLabel,
-  ListboxOption,
-  ListboxOptions,
-} from "@headlessui/vue";
-import {
-  CalendarDaysIcon,
-  CreditCardIcon,
   FaceFrownIcon,
   FaceSmileIcon,
   FireIcon,
   HandThumbUpIcon,
   HeartIcon,
-  PaperClipIcon,
-  UserCircleIcon,
   XMarkIcon as XMarkIconMini,
 } from "@heroicons/vue/20/solid";
-import { CheckCircleIcon } from "@heroicons/vue/24/solid";
 
-import Dropdown from "primevue/dropdown";
-import InputText from "primevue/inputtext";
-import TeamNavigation from "../components/TeamNavigation.vue";
-const selectedMember = ref();
+import NoTeamMessage from "./NoTeamMessage.vue";
+import HomeNavigation from "../components/HomeNavigation.vue";
+
 const teams = ref([]);
 const teamMembers = ref([
   {

@@ -5,7 +5,7 @@ export function getUserProjects() {
 }
 
 export function getProjectById(projectId: number) {
-    return httpClient.get(`projects/${projectId}/infos`)
+    return httpClient.get(`projects/${projectId}`)
 }
 
 export function getProjectTasks(projectId: number) {
