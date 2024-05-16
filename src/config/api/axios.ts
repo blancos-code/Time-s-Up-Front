@@ -2,7 +2,7 @@ import axios from 'axios';
 import router from "../../router";
 
 export const httpClient = axios.create({
-    baseURL: 'https://4260-37-170-120-65.ngrok-free.app/',
+    baseURL: 'https://9d29-159-180-251-47.ngrok-free.app/',
     timeout: 5000,
 });
 

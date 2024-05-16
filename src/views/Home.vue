@@ -209,7 +209,6 @@ const secondaryNavigation = [
 ]
 const stats = [
   {name: 'Cummul des charges', value: '540H', change: '', changeType: 'positive'},
-  {name: 'Cummul des surchages', value: '8H', change: '', changeType: 'negative'},
   {name: 'Nombre de membres', value: '17', change: '', changeType: 'negative'},
 ]
 const statuses = {
