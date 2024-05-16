@@ -1,7 +1,11 @@
 <template>
   <main>
     <div class="relative isolate overflow-hidden pt-16">
-      <HomeNavigation/>
+      <div
+          v-if="hasATeam"
+      >
+        <HomeNavigation/>
+      </div>
 
       <div
         v-if="hasATeam"
@@ -31,7 +35,10 @@
       </div>
     </div>
 
-    <div class="space-y-16 py-16 xl:space-y-20">
+    <div
+        v-if="hasATeam"
+        class="space-y-16 py-16 xl:space-y-20"
+    >
       <div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 class="mx-auto max-w-2xl text-base font-semibold leading-6 text-gray-900 lg:mx-0 lg:max-w-none">Projets</h2>
@@ -99,6 +106,16 @@
         </div>
       </div>
     </div>
+      <div class="flex justify-center items-center mt-4">
+        <div class="bg-white p-8 rounded-lg">
+          <h2 class="text-2xl font-bold mb-4">Vous n'avez pas encore rejoint d'équipe</h2>
+          <p class="text-gray-600 mb-4">Pour commencer à utiliser l'application, veuillez rejoindre une équipe existante ou en créer une nouvelle.</p>
+          <div class="flex justify-center space-x-4">
+            <button @click="createTeam" class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-blue-600">Créer une équipe</button>
+            <button @click="joinTeam" class="px-4 py-2 border border-indigo-600 text-indigo-600 rounded hover:bg-indigo-600 hover:text-white">Rejoindre une équipe</button>
+          </div>
+        </div>
+      </div>
   </main>
 </template>
 
@@ -182,12 +199,12 @@ const mobileMenuOpen = ref(false)
 const userInfos = ref({})
 
 const hasATeam = computed(() => {
-  return userInfos.value?.teams?.length !== 0
+  return userInfos.value?.teams?.length
 })
 
 
 onMounted(async () => {
-  userInfos.value = await httpClient.get('users/informations').then(response => {
+    httpClient.get('users/informations').then(response => {
     userInfos.value = response.data
     console.log(userInfos.value)
     console.log(userInfos.value.teams.length)
