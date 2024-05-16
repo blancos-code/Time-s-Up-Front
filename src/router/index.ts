@@ -47,9 +47,9 @@ const router = createRouter({
   ],
 });
 
-router.beforeEach((to, from) => {
+router.beforeEach((to) => {
   if (to.meta.requiresAuth && !AuthGuard.isAuthenticated()) {
-    console.log('User is not authenticated.')
+    console.log("User is not authenticated.");
     return { name: "login" };
   }
 });
