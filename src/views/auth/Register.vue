@@ -113,6 +113,7 @@
           </div>
           <div class="mt-2">
             <input
+              v-model="repeatpassword"
                 id="repeatpassword"
                 name="repeatpassword"
                 type="password"
@@ -152,18 +153,22 @@
 <script setup lang="ts">
 import router from "../../router";
 import {ref} from "vue";
-import {login, register} from "../../apiRequests/auth.ts";
+import {register} from "../../apiRequests/auth.ts";
 import {displayErrorToast} from "../../toast/toast.ts";
 
 const lastname = ref('')
 const firstname = ref('')
 const email = ref('')
 const password = ref('')
+const repeatpassword = ref('')
 
 function tryToRegister() {
+  if(repeatpassword.value !== password.value){
+    displayErrorToast("Les 2 mots de passe ne sont pas identiques");
+    return;
+  }
   register(lastname.value, firstname.value, email.value, password.value)
-      .then(response => {
-
+      .then((response : any) => {
         const token = response.data.token;
         const userId = response.data.id;
         const lastname = response.data.lastname;
@@ -177,12 +182,8 @@ function tryToRegister() {
         localStorage.setItem('email', email);
         router.push({name: 'home'})
       })
-      .catch(error => {
+      .catch(() => {
         displayErrorToast("Erreur lors de l'inscription")
-        console.error(error);
       });
 }
-
-
-
 </script>
