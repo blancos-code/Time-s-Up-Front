@@ -127,6 +127,7 @@ import {Bars3Icon, ClockIcon, ExclamationTriangleIcon,} from '@heroicons/vue/20/
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 import HomeNavigation from "../components/HomeNavigation.vue";
 import {httpClient} from "../config/api/axios.ts";
+import {getUserInfos} from "../apiRequests/user.js";
 
 const secondaryNavigation = [
   {name: 'Tableau de bord', href: '/', current: true},
@@ -204,7 +205,7 @@ const hasATeam = computed(() => {
 
 
 onMounted(async () => {
-    httpClient.get('users/informations').then(response => {
+    getUserInfos().then(response => {
     userInfos.value = response.data
     console.log(userInfos.value)
     console.log(userInfos.value.teams.length)
