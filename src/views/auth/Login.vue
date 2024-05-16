@@ -106,7 +106,16 @@ function tryToLogin() {
       .then(response => {
 
         const token = response.data.token;
+        const userId = response.data.id;
+        const lastname = response.data.lastname;
+        const firstname = response.data.firstname;
+        const email = response.data.email;
+
         localStorage.setItem('authToken', token);
+        localStorage.setItem('userId', userId);
+        localStorage.setItem('lastname', lastname);
+        localStorage.setItem('firstname', firstname);
+        localStorage.setItem('email', email);
         router.push({name: 'home'})
       })
       .catch(error => {

@@ -125,7 +125,6 @@
     </div>
 
     <div class="space-y-16 py-16 xl:space-y-20">
-      <!-- Recent activity table -->
       <div>
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 class="mx-auto max-w-2xl text-base font-semibold leading-6 text-gray-900 lg:mx-0 lg:max-w-none">Projets</h2>
