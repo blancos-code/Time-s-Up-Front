@@ -169,17 +169,6 @@ function tryToRegister() {
   }
   register(lastname.value, firstname.value, email.value, password.value)
       .then((response : any) => {
-        const token = response.data.token;
-        const userId = response.data.User.id;
-        const lastname = response.data.User.lastname;
-        const firstname = response.data.User.firstname;
-        const email = response.data.User.email;
-
-        localStorage.setItem('accessToken', token);
-        localStorage.setItem('userId', userId);
-        localStorage.setItem('lastname', lastname);
-        localStorage.setItem('firstname', firstname);
-        localStorage.setItem('email', email);
         router.push({name: 'home'})
       })
       .catch(() => {

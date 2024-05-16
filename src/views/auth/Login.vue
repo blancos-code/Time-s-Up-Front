@@ -104,18 +104,7 @@ const password = ref('')
 function tryToLogin() {
   login(email.value, password.value)
       .then(response => {
-
-        const token = response.data.token;
-        const userId = response.data.User.id;
-        const lastname = response.data.User.lastname;
-        const firstname = response.data.User.firstname;
-        const email = response.data.User.email;
-
-        localStorage.setItem('accessToken', token);
-        localStorage.setItem('userId', userId);
-        localStorage.setItem('lastname', lastname);
-        localStorage.setItem('firstname', firstname);
-        localStorage.setItem('email', email);
+        console.log('???')
         router.push({name: 'home'})
       })
       .catch(error => {

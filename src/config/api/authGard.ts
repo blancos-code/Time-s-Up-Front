@@ -1,5 +1,5 @@
 export class AuthGuard {
   static isAuthenticated() {
-    return localStorage.getItem('authToken');
+    return localStorage.getItem('accessToken');
   }
 }

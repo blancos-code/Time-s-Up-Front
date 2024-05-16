@@ -22,11 +22,17 @@ httpClient.interceptors.request.use(
 );
 
 httpClient.interceptors.response.use(
-  (response) => response,
+  (response) => {
+      if (response.data.token) {
+          localStorage.setItem('accessToken', response.data.token)
+      }
+
+      return response;
+  },
   (error) => {
     if (error.response && error.response.status === 401) {
       localStorage.removeItem("accessToken");
-      router.push({ name: "Login" });
+      router.push({ name: "login" });
 
       return Promise.reject(error);
     }
