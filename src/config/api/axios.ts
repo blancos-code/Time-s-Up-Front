@@ -2,7 +2,7 @@ import axios from 'axios';
 import router from "../../router";
 
 export const httpClient = axios.create({
-    baseURL: 'https://9d29-159-180-251-47.ngrok-free.app/',
+    baseURL: 'http://10.132.140.92:3000/',
     timeout: 5000,
 });
 
@@ -26,7 +26,7 @@ httpClient.interceptors.response.use(
         if (error.response && error.response.status === 401) {
 
             localStorage.removeItem('accessToken');
-            router.push({ name: 'Login' });
+            router.push({ name: 'login' });
 
             return Promise.reject(error);
         }

@@ -170,7 +170,7 @@ function tryToRegister() {
         const firstname = response.data.firstname;
         const email = response.data.email;
 
-        localStorage.setItem('authToken', token);
+        localStorage.setItem('accessToken', token);
         localStorage.setItem('userId', userId);
         localStorage.setItem('lastname', lastname);
         localStorage.setItem('firstname', firstname);

@@ -274,7 +274,7 @@ const mobileMenuOpen = ref(false)
 
 onMounted(() => {
   httpClient.get('users/informations').then(response => {
-    console.log(response)
+    console.log(response.data)
   })
 })
 
