@@ -196,12 +196,13 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
+import {onMounted, ref} from 'vue'
 import {Dialog, DialogPanel} from '@headlessui/vue'
 import {Bars3Icon, ClockIcon, ExclamationTriangleIcon,} from '@heroicons/vue/20/solid'
 
 import {BellIcon, XMarkIcon} from '@heroicons/vue/24/outline'
 import HomeNavigation from "../components/HomeNavigation.vue";
+import {httpClient} from "../config/api/axios.ts";
 
 const secondaryNavigation = [
   {name: 'Tableau de bord', href: '/', current: true},
@@ -270,4 +271,11 @@ const projets = [
 ]
 
 const mobileMenuOpen = ref(false)
+
+onMounted(() => {
+  httpClient.get('users/informations').then(response => {
+    console.log(response)
+  })
+})
+
 </script>
